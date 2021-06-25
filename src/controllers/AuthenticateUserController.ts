@@ -13,7 +13,7 @@ class AuthenticateUserController {
             password,
         });
 
-        res.status(200).json({ user, token });
+       return res.status(200).json({ user, token });
     }
 }
 
