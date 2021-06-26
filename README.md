@@ -1,21 +1,22 @@
-# NlW valoriza
+## NLW Valoriza
 
-##regras 
+- Projeto desenvolvido durante a nlw-06 trilha de node js
 
-- Cadastro de usuários
+## ✨ Tecnologias
 
-    [] Não é permitido cadastrar mais de um usuário com o mesmo email
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-    [] Não é permitido cadastrar usuário sem email
+- [Node.js](https://nodejs.org/en/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Express](https://expressjs.com/pt-br/)
+- [JSONWebToken](https://github.com/auth0/node-jsonwebtoken#readme)
 
-- Cadastro de tag
+[ ] Link para o repositorio oficial
 
-    [] Não é permetido cadastrar mais de uma tag com o mesmo nome
+- https://github.com/rocketseat-education/nlw-06-nodejs
 
-    [] Não é permetido cadastrar tag sem nome
+[ ] Alteraçães que eu fiz
 
-    [] Não é permetido cadastro por usuários que não sejam administradores
+- Adicionei variaveis de ambiente: [Dotenv](https://github.com/motdotla/dotenv)
 
-#
-
-# 
+- Adicionei tratamento de erros através da classe App Error: [express-async-errors](https://github.com/davidbanham/express-async-errors)
