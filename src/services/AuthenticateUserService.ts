@@ -2,6 +2,7 @@ import { compare } from "bcrypt";
 import { getCustomRepository } from "typeorm";
 import { UsersRepositories } from "../repositories/UsersRepositories";
 import { sign } from "jsonwebtoken"
+import { AppError } from "../errors/AppErrors";
 
 interface IAuthenticateRequest {
     email: string;
@@ -17,13 +18,13 @@ class AuthenticateUserService {
         });
 
         if (!user) {
-            throw new Error("Email or password incorrect!");
+            throw new AppError("Email or password incorrect!");
         }
 
         const passwordMatch = await compare(password, user.password);
 
         if (!passwordMatch) {
-            throw new Error("Email or password incorrect!");
+            throw new AppError("Email or password incorrect!");
         }
 
         const secret = process.env.JWT;
